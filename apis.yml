@@ -1,23 +1,125 @@
 aid: connectly
+
 name: Connectly
-description: 'Connectly is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.connectly.ai/redesign/4570d00b6da8068d2c0954804a5dbe2d4c4bfc248d284f10b3f6140c1fc2b3c3/hero.webp
+
+description: Connectly is an AI-native platform delivering intelligent agents that sell, serve, and engage customers across industries such as
+  retail, healthcare, financial services, telecommunications, utilities, and education. Backed by Unusual Ventures, Alibaba, and Volpe Capital,
+  Connectly provides AI agents for large enterprises in the US, Latin America, and the Middle East, offering features like product recommendation,
+  order handling, prescription processing, and compliance support, all ISO‑27001 certified and GDPR compliant.
+
 url: https://raw.githubusercontent.com/api-evangelist/connectly/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-10 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-10'
+
 modified: '2026-10-10'
+
 tags:
-- Company
-apis: []
+- AI
+- Platform
+- CustomerEngagement
+- Enterprise
+- Automation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/connectly-rules.yml
+- type: JSONLD
+  url: json-ld/connectly-context.jsonld
+- type: Vocabulary
+  url: vocabulary/connectly-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/connectly-webhooks.yml
+- type: DataModel
+  url: data-model/connectly-data-model.yml
+- type: Authentication
+  url: authentication/connectly-authentication.yml
+- type: Conformance
+  url: conformance/connectly-conformance.yml
+- type: LLMsTxt
+  url: llms/connectly-llms.txt
+- type: AgentCard
+  url: a2a/connectly-a2a.yml
+- type: WellKnown
+  url: well-known/connectly-well-known.yml
+- type: Hosts
+  url: hosts/connectly-hosts.yml
+- type: Vendors
+  url: vendors/connectly-vendors.yml
+- type: TrustCenter
+  url: https://trust.connectly.ai/
+- type: TermsOfService
+  url: https://www.connectly.ai/terms-of-service
+- type: Support
+  url: https://www.connectly.ai/support
+- type: PrivacyPolicy
+  url: https://www.connectly.ai/en/privacy-policy
+- type: Pricing
+  url: https://www.connectly.ai/pricing
+- type: Blog
+  url: https://www.connectly.ai/en/blog
+- type: GettingStarted
+  url: https://docs.connectly.ai/get-started/quick-start
+- type: Documentation
+  url: https://dev.connectly.ai/
+- type: DeveloperPortal
+  url: https://docs.connectly.ai\
+- type: DomainSecurity
+  url: security/connectly-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/connectly
+  url: https://www.connectly.ai
+
+apis:
+- aid: connectly:connectly-api
+  name: Connectly API
+  description: 'Connectly API as documented publicly: 4 operations. Contract generated from the documentation by API Evangelist (2026-10-10);
+    not the provider''s own document.'
+  humanURL: https://docs.connectly.ai/analytics/reports-api
+  baseURL: https://api.connectly.ai
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/connectly-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/connectly-post-v1-businesses-businessid-send-sendid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/connectly-post-v1-businesses-request-schema.json
+  - type: JSONSchema
+    url: json-schema/connectly-post-v1-businesses-response-schema.json
+  - type: JSONSchema
+    url: json-schema/connectly-post-v1-businesses-businessid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/connectly-post-v1-businesses-businessid-send-sendid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/connectly-post-v1-businesses-businessid-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Connectly provides public documentation but no machine‑readable OpenAPI, GraphQL, AsyncAPI, or other contract was found.
+  evidence:
+  - url: https://docs.connectly.ai/introduction.md
+    status: 200
+  checked: '2026-10-10'
+x-enrichment:
+  date: '2026-10-10'
+  status: enriched
+  artifacts_added: 29
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

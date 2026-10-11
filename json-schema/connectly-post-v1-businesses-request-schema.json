@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/connectly/main/json-schema/connectly-post-v1-businesses-request-schema.json",
+  "title": "PostV1BusinessesRequest",
+  "x-generated": "2026-10-10",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/connectly-openapi-generated.yml#/components/schemas/PostV1BusinessesRequest",
+  "type": "object",
+  "properties": {
+    "number": {
+      "type": "string"
+    },
+    "templateName": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "@context": {
+    "@vocab": "https://connectly.ai/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "connectly": "https://connectly.ai/schema#",
+    "PostV1BusinessesRequest": "connectly:PostV1BusinessesRequest",
+    "number": {
+      "@id": "connectly:number",
+      "@type": "xsd:string"
+    },
+    "templateName": {
+      "@id": "connectly:templateName",
+      "@type": "xsd:string"
+    },
+    "language": {
+      "@id": "connectly:language",
+      "@type": "xsd:string"
+    },
+    "parameters": {
+      "@id": "connectly:parameters",
+      "@container": "@list"
+    },
+    "PostV1BusinessesResponse": "connectly:PostV1BusinessesResponse",
+    "PostV1BusinessesBusinessidSendSendidRequest": "connectly:PostV1BusinessesBusinessidSendSendidRequest",
+    "recipient": {
+      "@id": "connectly:recipient"
+    },
+    "recipient.id": {
+      "@id": "connectly:recipient.id",
+      "@type": "xsd:string"
+    },
+    "recipient.channelType": {
+      "@id": "connectly:recipient.channelType",
+      "@type": "xsd:string"
+    },
+    "message": {
+      "@id": "connectly:message"
+    },
+    "message.text": {
+      "@id": "connectly:message.text",
+      "@type": "xsd:string"
+    },
+    "sender": {
+      "@id": "connectly:sender"
+    },
+    "sender.id": {
+      "@id": "connectly:sender.id",
+      "@type": "xsd:string"
+    },
+    "sender.channelType": {
+      "@id": "connectly:sender.channelType",
+      "@type": "xsd:string"
+    },
+    "PostV1BusinessesBusinessidSendSendidResponse": "connectly:PostV1BusinessesBusinessidSendSendidResponse",
+    "id": {
+      "@id": "connectly:id",
+      "@type": "xsd:string"
+    },
+    "PostV1BusinessesBusinessidRequest": "connectly:PostV1BusinessesBusinessidRequest",
+    "topic": {
+      "@id": "connectly:topic",
+      "@type": "xsd:string"
+    },
+    "address": {
+      "@id": "connectly:address",
+      "@type": "xsd:string"
+    },
+    "PostV1BusinessesBusinessidResponse": "connectly:PostV1BusinessesBusinessidResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Connectly API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Connectly's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-10) from openapi/_ae-authored/connectly-openapi-generated.yml.",
+  "dcterms:created": "2026-10-10",
+  "dcterms:source": [
+    "openapi/_ae-authored/connectly-openapi-generated.yml"
+  ]
+}

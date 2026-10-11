@@ -1,0 +1,19 @@
+generated: '2026-10-10'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.connectly.ai/webhooks/overview.md
+sources:
+- https://docs.connectly.ai/webhooks/overview.md
+- https://docs.connectly.ai/webhooks/payload-types.md
+- https://docs.connectly.ai/webhooks/webhook-keys.md
+- https://docs.connectly.ai/webhooks/create-webhook.md
+description: Connectly webhooks deliver real‑time WhatsApp events.
+events:
+- event: messages
+  description: Inbound WhatsApp messages sent to your business number by customers.
+- event: delivery_status
+  description: 'Delivery status updates for messages you sent: sent, delivered, read, or delivery_failed.'
+delivery:
+  retries: Connectly treats any non‑200 response as a failure and may retry the request.
+note: Your endpoint must return HTTP 200 for every event to acknowledge successful delivery; otherwise Connectly will retry.
+docs: https://docs.connectly.ai/webhooks/overview.md

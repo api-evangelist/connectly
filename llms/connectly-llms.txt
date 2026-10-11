@@ -1,0 +1,174 @@
+# Connectly
+
+## Developer Documentation
+
+### Get Started
+
+- [Introduction](https://docs.connectly.ai/introduction.md): Welcome to our developer documentation portal 👋
+- [Authentication & API Keys](https://docs.connectly.ai/get-started/authentication-and-api-keys.md): Generate and manage API keys from the Connectly Settings page — with scoped permissions and optional expiration 🗝️
+- [Quick Start](https://docs.connectly.ai/get-started/quick-start.md): Set up your account and send your first WhatsApp message in under 5 minutes ⏲️
+
+### Campaigns
+
+- [Campaigns Overview](https://docs.connectly.ai/campaigns/overview.md): Send a complete sequence of WhatsApp messages to multiple customers from a single API call using Connectly's Flow Builder and Campaigns API 📢
+- [Send Campaigns](https://docs.connectly.ai/campaigns/send-campaigns.md): Trigger one or more campaign flows to multiple recipients with variables, versioning, and per-entry status reporting 📩
+- [Send to an Audience](https://docs.connectly.ai/campaigns/send-to-audience.md): Send a published campaign to a stored recipient list, now or on a schedule, with idempotent retries 📨
+
+### Audiences
+
+- [Audiences Overview](https://docs.connectly.ai/audiences/overview.md): Store a recipient list once, then send published campaigns to it as often as you like — with scheduling, variables, and idempotent retries 📋
+- [Upload Recipients](https://docs.connectly.ai/audiences/upload-recipients.md): Stage a recipient CSV and get the asset id that creating an audience needs 📤
+- [Manage Audiences](https://docs.connectly.ai/audiences/manage-audiences.md): Create, replace, read, and delete the stored recipient lists your campaigns send to 📋
+
+### Messaging
+
+- [Messaging Overview](https://docs.connectly.ai/messaging/overview.md): Send WhatsApp messages to your customers — template messages for proactive outreach, session messages for real-time replies, and campaigns for bulk flows 📨
+- [Send Template Messages](https://docs.connectly.ai/messaging/template-messages.md): Send a pre-approved WhatsApp template to any customer, including those outside the 24-hour session window ✅
+- [Send Session Messages](https://docs.connectly.ai/messaging/session-messages.md): Send a free-form text, media, location, or interactive message within an active 24-hour WhatsApp session 🗺️
+- [Send Typing Indicators](https://docs.connectly.ai/messaging/typing-indicators.md): Show the WhatsApp typing indicator while your own system prepares a reply to a customer's message 💬
+- [WhatsApp Flows](https://docs.connectly.ai/messaging/whatsapp-flows.md): What WhatsApp Flows are, and how to send one through the API
+- [WhatsApp Flow Endpoints](https://docs.connectly.ai/messaging/whatsapp-flow-endpoints.md): Implement the data-exchange endpoint that powers dynamic WhatsApp Flows
+- [Error Codes](https://docs.connectly.ai/messaging/error-codes.md): Reference for all Connectly API error types and error codes — structure, causes, and how to handle them ❌
+- [Business-Scoped User IDs (BSUID)](https://docs.connectly.ai/messaging/bsuid.md): How Connectly surfaces WhatsApp BSUIDs for customers who adopt a username, and how to send messages to them 📥
+
+### Opt-Outs
+
+- [Opt-Outs Overview](https://docs.connectly.ai/opt-outs/overview.md): Sync your own consent records with Connectly — suppress contacts so campaigns and messages skip them, and re-enable the ones who opt back in 🚫
+- [Add Opt-Outs](https://docs.connectly.ai/opt-outs/add-opt-outs.md): Suppress up to 10,000 contacts in one call so campaigns and messages skip them 🚫
+- [Remove Opt-Outs](https://docs.connectly.ai/opt-outs/remove-opt-outs.md): Re-enable contacts who consented again — reversing only the suppressions this API recorded ↩️
+
+### Webhooks
+
+- [Webhooks Overview](https://docs.connectly.ai/webhooks/overview.md): Register an HTTPS endpoint to receive real-time WhatsApp events from Connectly — inbound messages, delivery status updates, and HMAC-SHA256 verification 🛜
+- [Webhook Payload Reference](https://docs.connectly.ai/webhooks/payload-types.md): Every webhook payload shape Connectly sends — inbound text, referrals, media, button replies, and delivery status events — with full JSON examples 💻
+- [Webhook Keys](https://docs.connectly.ai/webhooks/webhook-keys.md): Webhook keys are HMAC signing secrets used to verify that webhook payloads come from Connectly. One active key per business at a time 🔑
+- [Create Webhook](https://docs.connectly.ai/webhooks/create-webhook.md): Register an HTTPS endpoint to receive Connectly webhook events for a given topic 💪
+- [Get Webhooks](https://docs.connectly.ai/webhooks/get-webhooks.md): Retrieve all webhook registrations for your business 🤝
+- [Update Webhook](https://docs.connectly.ai/webhooks/update-webhook.md): Change the destination URL or configuration of an existing webhook registration 🔀
+- [Delete Webhook](https://docs.connectly.ai/webhooks/delete-webhook.md): Permanently remove a webhook registration and stop event delivery 🚥
+
+### Assets
+
+- [Assets Overview](https://docs.connectly.ai/assets/overview.md): Upload media files to Connectly's CDN and retrieve stable CDN URLs for use in templates, campaigns, and messages 🌁
+- [Create Asset](https://docs.connectly.ai/assets/create-asset.md): Upload a media file to Connectly's CDN by providing a source URL. Returns a stable CDN URL for use in templates and messages 🎧
+- [Get Asset](https://docs.connectly.ai/assets/get-asset.md): Retrieve the CDN URL for a previously uploaded asset by its ID 🪪
+
+### AI Features
+
+- [NDJSON Streaming](https://docs.connectly.ai/ai/parsing-ndjson.md): How to correctly parse the NDJSON streaming response from the Agent Graph invoke endpoint — and why response.json() fails 🤖
+
+#### Sofia AI
+
+- [Sofia AI Overview](https://docs.connectly.ai/ai/sofia-ai.md): Configure Sofia AI with your business knowledge, test it on WhatsApp, and integrate it into your campaign flows or call it directly via API 🦉
+- [Invoke Sofia AI](https://docs.connectly.ai/ai/sofia-ai-invoke.md): Call the Sofia AI sales assistant with a customer message and receive a streaming AI-generated response 🦾
+
+#### Agent Graph
+
+- [Agent Graph Overview](https://docs.connectly.ai/ai/agent-graph-overview.md): Build programmable, multi-turn AI conversation sessions with Connectly agents — init, invoke, and close sessions entirely in code 🧑‍💻
+- [Init Session](https://docs.connectly.ai/ai/agent-graph-init.md): Start a new conversation session with a Connectly AI agent and receive a sessionId for subsequent calls 🎙️
+- [Invoke (Stream)](https://docs.connectly.ai/ai/agent-graph-invoke.md): Send customer input events to a Connectly AI agent and receive a streaming NDJSON response ⌨️
+- [Invoke (Sync)](https://docs.connectly.ai/ai/agent-graph-invoke-sync.md): Send customer input events to an AI agent and receive a single aggregated JSON response without streaming 🫴
+- [Close Session](https://docs.connectly.ai/ai/agent-graph-close.md): End an active conversation session and release its resources ✌️
+- [Health Check](https://docs.connectly.ai/ai/agent-graph-health.md): Verify that the Agent Graph API is reachable and ready to accept sessions 🩺
+
+### Analytics
+
+- [Campaign Report](https://docs.connectly.ai/analytics/campaign-report.md): Download a per-customer CSV breakdown of every message in a campaign sendout — delivery timestamps, engagement, button clicks, and errors 🗂️
+- [Reports API](https://docs.connectly.ai/analytics/reports-api.md): Retrieve signed, time-limited CSV download URLs for your latest scheduled campaign report runs 📉
+- [Conversion Reporting](https://docs.connectly.ai/analytics/conversion-reporting.md): Report WhatsApp-attributed purchases and product views to Meta's Conversions API via Connectly 🧾
+- [Report Webhooks](https://docs.connectly.ai/analytics/report-webhooks.md): Register a webhook endpoint to receive an instant notification — with a signed download URL — when a campaign report run completes 🔔
+
+### Business Management
+
+- [Business Management Overview](https://docs.connectly.ai/business-management/overview.md): Manage WhatsApp message templates, monitor quality signals, and configure your business account via the Connectly API 🚀
+
+#### Templates
+
+- [Templates Overview](https://docs.connectly.ai/business-management/template-management.md): How WhatsApp message templates work — components, variable syntax, button types, categories, and the Meta approval process ⏭️
+- [Create Template](https://docs.connectly.ai/business-management/create-template.md): Submit a WhatsApp template to Meta for approval ⏳
+- [Get Templates](https://docs.connectly.ai/business-management/get-templates.md): List all WhatsApp templates for your account, including their approval status and components 📋
+- [Delete Template](https://docs.connectly.ai/business-management/delete-template.md): Permanently remove a WhatsApp template from Meta and Connectly ✏️
+
+#### Quality Signals
+
+- [Get Quality Signals](https://docs.connectly.ai/business-management/quality-signals.md): Fetch your WhatsApp messaging limit tier and quality score 💯
+
+### Integrations
+
+- [Integrations Overview](https://docs.connectly.ai/integrations/overview.md): Connect Connectly with your existing CRM, marketing automation, and customer engagement tools ⚒️
+- [Zendesk](https://docs.connectly.ai/integrations/zendesk.md): Route inbound WhatsApp conversations to Zendesk tickets and reply to customers directly from the Zendesk interface 🖇️
+- [Intercom](https://docs.connectly.ai/integrations/intercom.md): Mirror WhatsApp conversations in Intercom and reply to customers via the Intercom inbox using Make (Integromat) as the connector 📠
+- [WebEngage](https://docs.connectly.ai/integrations/webengage.md): Send WhatsApp campaigns and automated messaging flows from WebEngage using Connectly as your WhatsApp channel 🔗
+- [MoEngage (Alpha)](https://docs.connectly.ai/integrations/mo-engage-alpha.md): Send WhatsApp campaign messages triggered from MoEngage via the Connectly API. Currently in Alpha 🧪
+- [Klaviyo](https://docs.connectly.ai/integrations/klaviyo.md): Trigger WhatsApp campaigns from Klaviyo flows using the Connectly API — set up webhooks, map variables, and automate customer messaging from your e-commerce data 🛍️
+- [Tools](https://docs.connectly.ai/integrations/tools.md): Create standalone JavaScript tools that can be versioned, tested, and used as WhatsApp Flow endpoints — directly from your campaign flows 📓
+
+### Webchat
+
+#### Guides
+
+- [Connectly Webchat](https://docs.connectly.ai/webchat/overview.md): Add a chat launcher and panel to any web page — visitor conversations land in your Connectly inbox alongside every other channel 💬
+- [Install](https://docs.connectly.ai/webchat/install.md): Install the widget with a paste-in script tag or the npm package, including React, Vue, Svelte, Solid, Angular and server-rendered frameworks 🧩
+- [Configure](https://docs.connectly.ai/webchat/configure.md): Override your dashboard appearance settings per page using the config object, HTML attributes and CSS custom properties 🎨
+- [Sign in your users](https://docs.connectly.ai/webchat/sign-in.md): Tell the widget who your logged-in users are, so each one keeps a single conversation on every device and shows up in your inbox by name 🔐
+- [API](https://docs.connectly.ai/webchat/api.md): Drive the widget from your own code with the ConnectlyWebchat page global, the custom element and the events it dispatches 🎛️
+- [Troubleshooting](https://docs.connectly.ai/webchat/troubleshooting.md): Diagnose the quiet failures — an inactive client key, two integrations on one page, a server-side import, or a framework that will not render the element 🔧
+
+### Resources
+
+- [FAQ](https://docs.connectly.ai/resources/faq.md): Answers to the most common questions about the Connectly API — messaging, templates, webhooks, campaigns, and account setup 🙋‍♀️
+- [Migrate WhatsApp Accounts](https://docs.connectly.ai/business-management/migrate-whatsapp.md): Move an existing WhatsApp Business number from another BSP to Connectly — what transfers, what doesn't, and how to do it ↪️
+
+## Business Hub
+
+### Campaigns
+
+- [Click to WhatsApp Ads (CTWA) Setup Guide](https://docs.connectly.ai/business-hub/campaigns/ctwa.md): Learn how to set up Click to WhatsApp ad campaigns using Connectly — from linking your Facebook Page to building automated conversation flows.
+
+### Inbox
+
+- [Inbox Overview](https://docs.connectly.ai/business-hub/inbox/overview.md): Manage every customer conversation in one place — messages from customers, agents, campaigns, Sofia AI, and automations, with full context 💬
+- [Finding Conversations](https://docs.connectly.ai/business-hub/inbox/finding-conversations.md): Filter, search, and switch views to find the right conversations in your inbox — by campaign, status, ticket number, tags, and more 🔍
+- [Working Conversations](https://docs.connectly.ai/business-hub/inbox/working-a-conversation.md): Reply to customers with text, templates, quick replies, files, audio, emoji, and reactions — right from the conversation 💬
+- [Managing Tickets](https://docs.connectly.ai/business-hub/inbox/managing-tickets.md): Open, assign, resolve, and reopen tickets, manage automations, and read the AI summary when a ticket closes 🎫
+- [Customer Panel](https://docs.connectly.ai/business-hub/inbox/customer-panel.md): View and edit a customer's profile, add notes, and review their ticket history — all beside the conversation 👤
+- [Inbox Settings](https://docs.connectly.ai/business-hub/inbox/settings.md): Configure how your team's inbox works — send behavior, ticket routing and automation, satisfaction surveys, topics, and tags ⚙️
+- [Ticket Management & Automation](https://docs.connectly.ai/business-hub/inbox/ticket-management.md): How tickets move through your inbox — auto-resolve, closure time, resolution reason, and automation resume ⚙️
+- [Ticket Routing](https://docs.connectly.ai/business-hub/inbox/ticket-routing.md): Automatically create and assign tickets when conversations need a human — and control how agents are chosen, capped, queued, and reassigned ⚙️
+- [Customer Satisfaction Survey](https://docs.connectly.ai/business-hub/inbox/customer-satisfaction-survey.md): Send a satisfaction survey to customers after a ticket is closed, so you can measure how your support is doing ⚙️
+- [Ticket Topics & Conversation Tags](https://docs.connectly.ai/business-hub/inbox/topics-and-tags.md): Manage the topics for your chatroom and the tags for your conversations, so your team stays organized ⚙️
+
+#### Analytics
+
+- [Inbox Analytics](https://docs.connectly.ai/business-hub/inbox/analytics.md): Measure your team's support performance — ticket volume, response and resolution times, CSAT, and trends over time 📊
+- [Analytics: tickets, teams & agents](https://docs.connectly.ai/business-hub/inbox/analytics-performance.md): Dig into per-ticket data and compare performance across teams and agents 📊
+- [Analytics: live monitoring & auto-assignment](https://docs.connectly.ai/business-hub/inbox/analytics-live.md): See open tickets and queued conversations in real time, and measure how auto-assignment is performing 📊
+
+### User Management
+
+- [User Management](https://docs.connectly.ai/business-hub/inbox/user-management.md): Add users, assign roles, and control who can access what in your workspace 👥
+
+### Teams & Stores
+
+- [Teams & Stores](https://docs.connectly.ai/business-hub/teams-and-stores/overview.md): Organize your agents into teams, connect teams to store locations, and route conversations to the right group of people ⚙️
+- [Teams](https://docs.connectly.ai/business-hub/teams-and-stores/teams.md): Create teams, organize them in folders, and manage their members ⚙️
+- [Stores](https://docs.connectly.ai/business-hub/teams-and-stores/stores.md): Turn your store locations into teams so you can route customers to the right branch ⚙️
+
+### Business-Scoped User IDs
+
+- [How to handle WhatsApp Usernames & BSUIDs](https://docs.connectly.ai/business-hub/bsuid/handling-bsuid.md): What WhatsApp usernames mean for your business, how customers without phone numbers appear in Connectly, and what you need to do ✍️
+- [Sign-Up Units & BSUIDs](https://docs.connectly.ai/business-hub/bsuid/signup-bsuid.md): How the WhatsApp BSUID rollout affects sign-up unit flows that rely on phone number matching, and how to adapt them 📲
+
+### Additional Resources
+
+- [WhatsApp Cost Management](https://docs.connectly.ai/resources/cost-management.md): Best practices for managing WhatsApp service message costs under Meta's per-message pricing model 💵
+
+> The links below point to documentation indexes. Follow each `/_llms/` index recursively until you reach documentation pages.
+
+## Indexes
+
+- [Spanish (18 pages)](https://docs.connectly.ai/_llms/es.txt): Documentation for Spanish.
+- [Brazilian Portuguese (18 pages)](https://docs.connectly.ai/_llms/pt-br.txt): Documentation for Brazilian Portuguese.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -1,0 +1,27 @@
+generated: '2026-10-10'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.connectly.ai/get-started/authentication-and-api-keys.md
+sources:
+- https://docs.connectly.ai/get-started/authentication-and-api-keys.md
+- https://docs.connectly.ai/get-started/quick-start.md
+- https://docs.connectly.ai/business-hub/campaigns/ctwa.md
+description: API keys authenticate your requests to the Connectly API.
+schemes:
+- type: apiKey
+  name: API Key
+  evidence: 'Include the key in the `X-API-Key` header on every request to the Connectly API:'
+  location: header
+  header: X-API-Key
+  scopes:
+  - ai.manage
+  - campaign.manage
+  - commerce.manage
+  - conversation.manage
+  - customer.manage
+  - key.manage
+  - messaging.send
+  - system.manage
+  - workspace.manage
+  how_to_obtain: Generate and manage API keys from the Connectly Settings page — with scoped permissions and optional expiration.
+docs: https://docs.connectly.ai/get-started/authentication-and-api-keys.md

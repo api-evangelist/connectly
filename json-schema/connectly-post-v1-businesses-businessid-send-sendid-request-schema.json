@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/connectly/main/json-schema/connectly-post-v1-businesses-businessid-send-sendid-request-schema.json",
+  "title": "PostV1BusinessesBusinessidSendSendidRequest",
+  "x-generated": "2026-10-10",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/connectly-openapi-generated.yml#/components/schemas/PostV1BusinessesBusinessidSendSendidRequest",
+  "type": "object",
+  "properties": {
+    "recipient": {
+      "type": "object",
+      "description": "Recipient object containing id and channelType."
+    },
+    "recipient.id": {
+      "type": "string",
+      "description": "Recipient’s WhatsApp number in E.164 format."
+    },
+    "recipient.channelType": {
+      "type": "string",
+      "description": "Channel type, e.g., \"whatsapp\"."
+    },
+    "message": {
+      "type": "object",
+      "description": "Message object."
+    },
+    "message.text": {
+      "type": "string",
+      "description": "Text content of the session message."
+    },
+    "sender": {
+      "type": "object",
+      "description": "Optional sender object to choose which WhatsApp number sends the message."
+    },
+    "sender.id": {
+      "type": "string",
+      "description": "WhatsApp number of the sender in E.164 format."
+    },
+    "sender.channelType": {
+      "type": "string",
+      "description": "Channel type for the sender, e.g., \"whatsapp\"."
+    }
+  },
+  "required": [
+    "recipient",
+    "recipient.id",
+    "recipient.channelType",
+    "message",
+    "message.text"
+  ]
+}

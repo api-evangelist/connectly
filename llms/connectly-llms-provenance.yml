@@ -1,0 +1,6 @@
+generated: '2026-10-10'
+method: probed
+generator: harvest-llms.py
+source: https://docs.connectly.ai/llms.txt
+bytes: 17380
+note: saved verbatim; the provider's own document

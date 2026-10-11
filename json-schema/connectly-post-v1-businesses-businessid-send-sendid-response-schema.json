@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/connectly/main/json-schema/connectly-post-v1-businesses-businessid-send-sendid-response-schema.json",
+  "title": "PostV1BusinessesBusinessidSendSendidResponse",
+  "x-generated": "2026-10-10",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/connectly-openapi-generated.yml#/components/schemas/PostV1BusinessesBusinessidSendSendidResponse",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The message ID."
+    }
+  }
+}
