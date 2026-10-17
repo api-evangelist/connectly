@@ -86,16 +86,16 @@ common:
   url: https://www.connectly.ai
 
 apis:
-- aid: connectly:connectly-api
-  name: Connectly API
-  description: 'Connectly API as documented publicly: 4 operations. Contract generated from the documentation by API Evangelist (2026-10-10);
-    not the provider''s own document.'
+- aid: connectly:connectly-businesses-api
+  name: Connectly Businesses API
+  description: The Businesses API from Connectly — 4 operation(s) for businesses.
   humanURL: https://docs.connectly.ai/analytics/reports-api
   baseURL: https://api.connectly.ai
+  tags:
+  - Businesses
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/connectly-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/connectly-businesses-api-openapi.yml
   - type: JSONSchema
     url: json-schema/connectly-post-v1-businesses-businessid-send-sendid-request-schema.json
   - type: JSONSchema
@@ -108,7 +108,6 @@ apis:
     url: json-schema/connectly-post-v1-businesses-businessid-send-sendid-response-schema.json
   - type: JSONSchema
     url: json-schema/connectly-post-v1-businesses-businessid-response-schema.json
-
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec

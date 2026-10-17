@@ -1,0 +1,242 @@
+openapi: 3.2.0
+info:
+  title: Connectly Businesses API
+  version: '2026-10-10'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-10: 4 operation(s) read from 11 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Connectly has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 9
+    documentation: -5
+    pages-with-code: 11
+    pages-read: 11
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-10'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.connectly.ai/analytics/reports-api
+  - https://docs.connectly.ai/webhooks/overview.md
+  - https://docs.connectly.ai/analytics/reports-api.md
+  - https://docs.connectly.ai/webhooks/get-webhooks.md
+  - https://docs.connectly.ai/webhooks/webhook-keys.md
+  - https://docs.connectly.ai/webhooks/create-webhook.md
+  - https://docs.connectly.ai/webhooks/delete-webhook.md
+  - https://docs.connectly.ai/webhooks/update-webhook.md
+  - https://docs.connectly.ai/analytics/report-webhooks.md
+  - https://docs.connectly.ai/get-started/authentication-and-api-keys.md
+  - https://docs.connectly.ai/get-started/quick-start
+servers:
+- url: https://api.connectly.ai
+security:
+- apiKey: []
+tags:
+- name: Businesses
+paths:
+  /v1/businesses:
+    post:
+      operationId: post_v1_businesses
+      tags:
+      - Businesses
+      summary: POST /v1/businesses
+      x-source: https://docs.connectly.ai/get-started/quick-start
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1BusinessesRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1BusinessesResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl Python JavaScript curl --request POST  --url https://api.connectly.ai/v1/businesses/ < business_i d > /send/whatsapp_templated_messages  --header 'Content-Type: application/json'  --header 'X-API-Key: <YOUR_KEY_HERE>'  --data '{ \n \"number\": \"+1XXXXXXXXXX\", \n \"templateName\": \"your_template_name\", \n \"language\": \"en_US\", \n \"parameters\": [ \n { \"name\": \"body_1\", \"value\": \"John\" }, \n { \"name\": \"bod"
+  /v1/businesses/{businessId}/send/{sendid}:
+    post:
+      operationId: post_v1_businesses_businessId_send_sendid
+      tags:
+      - Businesses
+      summary: Quick Start - Connectly Documentation
+      description: Send a session message within the 24‑hour window.
+      x-source: https://docs.connectly.ai/get-started/quick-start
+      parameters:
+      - name: businessId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: sendid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1BusinessesBusinessidSendSendidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1BusinessesBusinessidSendSendidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at sendId
+  /v1/businesses/{businessid}:
+    post:
+      operationId: post_v1_businesses_businessid
+      tags:
+      - Businesses
+      summary: POST /v1/businesses/{businessId}
+      x-source: https://docs.connectly.ai/webhooks/overview.md
+      parameters:
+      - name: businessid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1BusinessesBusinessidRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV1BusinessesBusinessidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --request POST  --url https://api.connectly.ai/v1/businesses/<business_id>/create/webhooks  --header ''Content-Type: application/json''  --header ''X-API-Key: <YOUR_KEY_HERE>''  --data ''{"topic": "messages", "address": "https://example.com/webhook"}''
+
+          ```'
+  /v1/businesses/{businessid}/business_keys:
+    post:
+      operationId: post_v1_businesses_businessid_business_keys
+      tags:
+      - Businesses
+      summary: POST /v1/businesses/{businessid}/business_keys
+      x-source: https://docs.connectly.ai/webhooks/webhook-keys.md
+      parameters:
+      - name: businessid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X POST "https://api.connectly.ai/v1/businesses/{businessId}/business_keys"  -H "X-API-Key: YOUR_API_KEY"  -H "Content-Type: application/json"
+
+          ```'
+components:
+  schemas:
+    PostV1BusinessesResponse:
+      type: object
+      properties:
+        number:
+          type: string
+        templateName:
+          type: string
+        language:
+          type: string
+        parameters:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              value:
+                type: string
+    PostV1BusinessesRequest:
+      type: object
+      properties:
+        number:
+          type: string
+        templateName:
+          type: string
+        language:
+          type: string
+        parameters:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              value:
+                type: string
+    PostV1BusinessesBusinessidSendSendidRequest:
+      type: object
+      properties:
+        recipient:
+          type: object
+          description: Recipient object containing id and channelType.
+        recipient.id:
+          type: string
+          description: Recipient’s WhatsApp number in E.164 format.
+        recipient.channelType:
+          type: string
+          description: Channel type, e.g., "whatsapp".
+        message:
+          type: object
+          description: Message object.
+        message.text:
+          type: string
+          description: Text content of the session message.
+        sender:
+          type: object
+          description: Optional sender object to choose which WhatsApp number sends the message.
+        sender.id:
+          type: string
+          description: WhatsApp number of the sender in E.164 format.
+        sender.channelType:
+          type: string
+          description: Channel type for the sender, e.g., "whatsapp".
+      required:
+      - recipient
+      - recipient.id
+      - recipient.channelType
+      - message
+      - message.text
+    PostV1BusinessesBusinessidRequest:
+      type: object
+      properties:
+        topic:
+          type: string
+        address:
+          type: string
+    PostV1BusinessesBusinessidSendSendidResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The message ID.
+    PostV1BusinessesBusinessidResponse:
+      type: object
+      properties:
+        id:
+          type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
