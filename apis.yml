@@ -24,7 +24,16 @@ created: '2026-10-10'
 
 modified: '2026-10-10'
 
+x-docs-platform: mintlify
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-17
 tags:
+- Artificial Intelligence
+- Platform
+- Customer Engagement
+- Enterprise
+- Automation
+tags_raw:
 - AI
 - Platform
 - CustomerEngagement
@@ -92,6 +101,8 @@ apis:
   humanURL: https://docs.connectly.ai/analytics/reports-api
   baseURL: https://api.connectly.ai
   tags:
+  - Business
+  tags_raw:
   - Businesses
   properties:
   - type: OpenAPI
