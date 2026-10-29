@@ -64,5 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Connectly is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/connectly
+Connectly is an AI-native platform delivering intelligent agents that sell, serve, and engage customers across industries such as retail, healthcare, financial services, telecommunications, utilities, and education. Backed by Unusual Ventures, Alibaba, and Volpe Capital, Connectly provides AI agents for large enterprises in the US, Latin America, and the Middle East, offering features like product recommendation, order handling, prescription processing, and compliance support, all ISO‑27001 certified and GDPR compliant.
+
+**Areas:** Artificial Intelligence · Platform · Customer Engagement · Enterprise · Automation
+
+## Connectly on APIs.io
+
+Everything profiled for Connectly is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/connectly/](https://apis.io/providers/connectly/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Connectly Businesses API](https://apis.io/apis/connectly/connectly-businesses-api/) — The Businesses API from Connectly — 4 operation(s) for businesses.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Connectly Webhooks](https://apis.io/asyncapis/connectly/connectly-webhooks/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [PostV1BusinessesBusinessidRequest](https://apis.io/schemas/connectly/connectly-post-v1-businesses-businessid-request/)
+- [PostV1BusinessesBusinessidResponse](https://apis.io/schemas/connectly/connectly-post-v1-businesses-businessid-response/)
+- [PostV1BusinessesBusinessidSendSendidRequest](https://apis.io/schemas/connectly/connectly-post-v1-businesses-businessid-send-sendid-request/)
+- [PostV1BusinessesBusinessidSendSendidResponse](https://apis.io/schemas/connectly/connectly-post-v1-businesses-businessid-send-sendid-response/)
+- [PostV1BusinessesRequest](https://apis.io/schemas/connectly/connectly-post-v1-businesses-request/)
+- [PostV1BusinessesResponse](https://apis.io/schemas/connectly/connectly-post-v1-businesses-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Connectly Context](https://apis.io/jsonld/connectly/connectly-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Connectly API Rules](https://apis.io/rules/connectly/connectly-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Connectly Authentication](https://apis.io/security/connectly/connectly-authentication/)
+- [Connectly Domain Security](https://apis.io/security/connectly/connectly-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.connectly.ai)
+- [Documentation](https://dev.connectly.ai/)
+- [Getting started](https://docs.connectly.ai/get-started/quick-start)
+- [Pricing](https://www.connectly.ai/pricing)
+- [Support](https://www.connectly.ai/support)
+- [Blog](https://www.connectly.ai/en/blog)
+- [Trust centre](https://trust.connectly.ai/)
+- [Terms of service](https://www.connectly.ai/terms-of-service)
+- [Privacy policy](https://www.connectly.ai/en/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 39.9** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 34.1 |
+| Contract governance | 33.3 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 39.5 |
+
+**Agent readiness 42.3** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 27.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/connectly/](https://apis.io/providers/connectly/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Connectly: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/connectly/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
